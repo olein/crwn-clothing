@@ -1,8 +1,9 @@
 import './custom-button.styles.scss';
 
-function ButtonComponent({children, isGoogoleSignIn, ...otherProps}) {
+function ButtonComponent({children, isGoogoleSignIn, inverted, ...otherProps}) {
     return (
-         <button className={`${isGoogoleSignIn ? 'google-sign-in': ''} custom-button`} {...otherProps}>
+         <button className={`${inverted ? 'inverted': ''} ${isGoogoleSignIn ? 'google-sign-in': ''} 
+         custom-button`} {...otherProps}>
                {children}  
           </button>
     );
